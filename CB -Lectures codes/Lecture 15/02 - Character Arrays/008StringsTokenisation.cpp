@@ -7,6 +7,7 @@ int main(){
 	char dlim[] = ".$";
 
     char* token=strtok(str,dlim);
+
     //remove .$
     //cout<<token; // abc
 
@@ -21,9 +22,9 @@ int main(){
 	// cout << token << endl;
 
     
-    while(token!=NULL){
-        cout<<token<<endl;
-        token=strtok(NULL,dlim);
-    }
+    // while(token!=NULL){
+    //     cout<<token<<endl;
+    //     token=strtok(NULL,dlim);
+    // }
 
 }

@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <algorithm>
+#include <string>
 using namespace std;
 bool myStringGreater(string a,string b){
     if(a>b){
@@ -18,7 +19,7 @@ bool myStringGreater(string a,string b){
 }
 int main(){
     string arr[] = {"abc", "ghi", "jkl", "def"};
-    int n=4;
+    int n=sizeof(arr)/sizeof(arr[0]);
     string brr[n];
     for(int i=0;i<n;i++){
         brr[i]=arr[i];
