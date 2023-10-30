@@ -1,13 +1,16 @@
 #include <iostream>
 using namespace std;
-void printdiagonal(int arr[][10],int m,int n,i,j){
-    for()
+void printdiagonal(int arr[][10],int m,int n,int i,int j){
+    int lengthOfDiagonal=min(m-i,n-j);
+    for(int k=0;k<lengthOfDiagonal;k++){
+        cout<<arr[i+k][j+k]<<" ";
+    }
 }
 void diagionaltraverse(int arr[][10],int m,int n){
 
     //start diagonal from rows 0<=rows<=n-1 
     //1.(i,0)
-    for(int i=0;i<=m-1;i++ ){
+    for(int i=m-i;i>=0;i--){
         printdiagonal(arr,m,n,i,0);
 
     }

@@ -29,8 +29,8 @@ void generatepermutation(int t,vector<int> c,vector<int>& combi,int i){
 
 }
 int main(){
-    int target=4;
-    vector<int> candidate={1,2,3};
+    int target=7;
+    vector<int> candidate={2, 3, 5, 7};
     vector<int> combi;
     generatepermutation(target,candidate,combi,0);
 
