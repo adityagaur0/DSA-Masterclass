@@ -70,7 +70,7 @@ vector<int> asteroidCollision(vector<int>& asteroids) {
 
 
 int main(){
-    vector<int> asteroids={7,3,-4,5,2,-8,2,4,1,-4};
+    vector<int> asteroids={1,-2,-2,-2};
     
 
     vector<int> out= asteroidCollision(asteroids);
