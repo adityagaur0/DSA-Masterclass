@@ -39,6 +39,7 @@ int main(){
 
     vector<int> perm;
     generatepermutation(target,candidate,perm);
+    return 0;
 
 
 }
