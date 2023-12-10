@@ -1,5 +1,21 @@
 #include <iostream>
 using namespace std;
+
+// accurate
+    vector<vector<int>> transpose(vector<vector<int>>& matrix) {
+        int m=matrix.size(); //rows
+        int n=matrix[0].size();//columns
+        vector<vector<int>> t(n,vector<int>(m,0));
+        for(int i=0;i<n;i++){ //iterate columns
+            for(int j=0;j<m;j++){ //iterate rows
+                t[i][j]=matrix[j][i]; 
+            }
+            cout<<endl;
+
+           
+        }
+        return t;
+    }
 int main(){
     // arr[row][col]
     //arr[y][x]
