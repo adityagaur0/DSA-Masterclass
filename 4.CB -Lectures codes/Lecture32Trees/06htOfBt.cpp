@@ -65,7 +65,7 @@ int computeHeight(TreeNode* root){
 
     int y=computeHeight(root->right);
 
-    return 1+max(x,y);
+    return 1+max(x,y);// or max(1+x,1+y);
 }
 
 int main(){
