@@ -77,8 +77,9 @@ void printPostOrder(TreeNode* root){
     cout<<root->val<<" ";
 }
 int main(){
-    TreeNode* root=NULL;
+    TreeNode* root=NULL; // ek class joh node ko represent kr rahi tree mein and root pointer tree ke topmost ko point kr ra joh abhi null hai
     /*
+
     The TreeNode is typically a struct or class representing 
     a node in the tree, and the root pointer points to the 
     topmost node in the tree, commonly referred to as the root node.
