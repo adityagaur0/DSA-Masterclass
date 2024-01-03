@@ -74,6 +74,15 @@ void printPostOrder(TreeNode* root){
 }
 int main(){
     TreeNode* root=NULL;
+    /*
+    The TreeNode is typically a struct or class representing 
+    a node in the tree, and the root pointer points to the 
+    topmost node in the tree, commonly referred to as the root node.
+
+    By initializing root to NULL, it indicates that the tree is
+     currently empty. As nodes are added to the tree, the root
+     pointer will be updated to point to the actual root node of the tree.
+    */
 
     root=new TreeNode(10);  //on heap
     root->left=new TreeNode(20);
