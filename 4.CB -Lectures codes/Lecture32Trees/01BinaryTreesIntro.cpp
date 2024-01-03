@@ -89,6 +89,14 @@ int main(){
     */
 
     root=new TreeNode(10);  //on heap
+    /*
+    is allocating memory for a new TreeNode object with 
+    a data value of 10 and making the root pointer point to this newly created node.
+
+    aka
+    yea line ek nayi jagah banarii naye object ke liye jiski value 10 hai.
+    and root pointer ko newly created node ki taraf point kr wari.
+    */
     root->left=new TreeNode(20);
     root->right=new TreeNode(30);
     root->left->left=new TreeNode(40);
