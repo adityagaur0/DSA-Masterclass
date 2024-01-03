@@ -7,6 +7,10 @@ class TreeNode{
         TreeNode* left;
         TreeNode* right;
 
+        /**
+         The constructor is used to initialize the node with 
+         a given value and set the left and right pointers to NULL.
+        */
         TreeNode(int val){
             this->val=val;
             this->left=NULL;
