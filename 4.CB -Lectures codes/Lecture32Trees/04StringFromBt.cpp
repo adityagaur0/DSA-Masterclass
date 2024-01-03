@@ -60,7 +60,7 @@ string tree2str(TreeNode* root){
         return to_string(root->val)+"()("+y+")";
 
     }
-    return to_string(root->val);
+    return to_string(root->val); // condition jab root hi hai and uska right and left child kuch ni (eg 10 -1 -1 return 10)
 }
 
 
