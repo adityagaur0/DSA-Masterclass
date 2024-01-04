@@ -19,7 +19,7 @@ public :
 
 };
 
-void PathSum(TreeNode* root, int targetSum,vector<int>& path,vector<vector<int>>& path) {
+void PathSum(TreeNode* root, int targetSum,vector<int>& path,vector<vector<int>>& paths) {
 
     //base case
     if(root==NULL){
