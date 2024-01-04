@@ -64,7 +64,17 @@ bool checkHeightBalanced(TreeNode* root){
     //base case
 
     //recusive case
-    
+    //check if the given bt root is height balanced or not
+
+    //1. recusively, check if the lst is height balanced or not.
+    int x=checkHeightBalanced(root->left);
+    //2. recusively, check if the rst is height balanced or not.
+    int y=checkHeightBalanced(root->right);
+    //3. check if the root node satisfy the height balanced property.
+    if(abs(x-y)<=1){
+        return true;
+    }
+    return false;
 
 }
 
