@@ -66,7 +66,7 @@ int main() {
 	root->right->left = new TreeNode(4);
 	root->right->right = new TreeNode(5);
 
-	int targetSum = 12;
+	int targetSum = 8;
 
 	// root = new TreeNode(4);
 
