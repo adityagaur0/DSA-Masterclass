@@ -7,19 +7,32 @@ public:
     TreeNode* right;
 
     TreeNode(int val){
-        this->val=val:
+        this->val=val;
         this->left=NULL;
         this->right=NULL;
 
     }
-}
+};
 
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q){
     //base case
+    if(root==NULL){
+        return NULL;
+    }
+    if(root==p|| root==q){
+        return root;
+    }
 
     //recusive case
 
-    TreeNode left= 
+    TreeNode* left= lowestCommonAncestor(root->left,p,q);
+    TreeNode* right=lowestCommonAncestor(root->right,p,q);
+    if(left==NULL) return right;
+    if(right==NULL) return left;
+    if(left!= NULL and right !=NULL) return root;
+
+    return NULL; //left==null and right==null
+
 }
 int main() {
 
