@@ -60,21 +60,35 @@ TreeNode* buildTree() {
 	return root;
 
 }
+
+int computeHeight(TreeNode* root){
+    //base case
+    if(root==NULL){
+        return -1;
+    }
+
+    //recusive case
+    int x= computeHeight(root->left);
+    int y=computeHeight(root->right);
+    return max((1+x), (1+y));
+}
 bool checkHeightBalanced(TreeNode* root){
     //base case
+    if(root==NULL){
+        return true; // no voilation if root == null no height balanced property violating
+    }
 
     //recusive case
     //check if the given bt root is height balanced or not
 
     //1. recusively, check if the lst is height balanced or not.
-    int x=checkHeightBalanced(root->left);
+    bool lstIsBalanced=checkHeightBalanced(root->left);
     //2. recusively, check if the rst is height balanced or not.
-    int y=checkHeightBalanced(root->right);
+    bool rstIsBalanced=checkHeightBalanced(root->right);
     //3. check if the root node satisfy the height balanced property.
-    if(abs(x-y)<=1){
-        return true;
-    }
-    return false;
+    bool rootIsBalanced= abs(computeHeight(root->left) -computeHeight(root->right))<=1?true :false;
+
+    return lstIsBalanced and rstIsBalanced and rootIsBalanced;
 
 }
 
