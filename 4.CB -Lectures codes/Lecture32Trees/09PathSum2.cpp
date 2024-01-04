@@ -19,7 +19,7 @@ public :
 
 };
 
-void PathSum(TreeNode* root, int targetSum,vector<int>& path) {
+void PathSum(TreeNode* root, int targetSum,vector<int>& path,vector<vector<int>>& path) {
 
     //base case
     if(root==NULL){
@@ -29,10 +29,11 @@ void PathSum(TreeNode* root, int targetSum,vector<int>& path) {
         //you have reached the leaf node
         if(root->val==targetSum){
             path.push_back(root->val);
-            for(int node_val:path){
-                cout<<node_val<<" ";
-            }
-            cout<<endl;
+            // for(int node_val:path){
+            //     cout<<node_val<<" ";
+            // }
+            // cout<<endl;
+            paths.push_back(path);
             path.pop_back(); //pop back after print the path aka back track
             //backtrack here cuz multiple path exist.
             //take referenc od path to node
@@ -48,8 +49,8 @@ void PathSum(TreeNode* root, int targetSum,vector<int>& path) {
 	// 2. recursively, print if there exists a root-to-leaf path in the rightSubtree whose sum is equal to targetSum - root->val
 
     path.push_back(root->val);
-    PathSum(root->left,targetSum - root->val,path);
-    PathSum(root->right,targetSum - root->val,path);
+    PathSum(root->left,targetSum - root->val,path,paths);
+    PathSum(root->right,targetSum - root->val,path,paths);
     path.pop_back();
 
 }
@@ -72,7 +73,9 @@ int main() {
 
 	int targetSum = 22;
     vector<int> path;
-	PathSum(root, targetSum,path) ;
+	// PathSum(root, targetSum,path) ;
+    vector<vector<int>> paths;
+    PathSum(root, targetSum,path,paths) ;
 
 	return 0;
 }
