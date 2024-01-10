@@ -72,7 +72,7 @@ int computeHeight(TreeNode* root){
     int y=computeHeight(root->right);
     return max((1+x), (1+y));
 }
-bool checkHeightBalanced(TreeNode* root){
+bool checkHeightBalanced(TreeNode* root){ //time complexity: O(n2)
     //base case
     if(root==NULL){
         return true; // no voilation if root == null no height balanced property violating
