@@ -97,26 +97,29 @@ class Pair{
 	 bool isBalanced;
 };
 
-Pair optimisedHeightBalanced(TreeNode* root){
+Pair checkHeightBalancedOptmised(TreeNode* root) {
 	Pair p;
-	//base case
-	if(root==NULL){
-		p.height=-1;
-		p.isBalanced=true;
+	// base cas
+	if (root == NULL) {
+		p.isBalanced = true;
+		p.height = -1;
 		return p;
 	}
+	// recursive case
 
-	//recusive case
-	Pair left=optimisedHeightBalanced(root->left);
-	Pair right=optimisedHeightBalanced(root->right);
+	// 1. recursively, check if the leftSubtree is heightBalanced and simulataneouly compute its height
+	Pair left = checkHeightBalancedOptmised(root->left);
 
-	bool rootIsBalanced=abs(left.height-right.height)<=1?true:false;
+	// 2. check if the rightSubtree is heightBalanced and simulataneouly compute its height
+	Pair right = checkHeightBalancedOptmised(root->right);
 
-	p.height=1+max(left.height,right.height);
-	p.isBalanced =left.isBalanced and right.isBalanced and rootIsBalanced;
+	// 3. check if the heightBalance is satisfied at the root node
+	bool rootIsBalanced = abs(left.height - right.height) <= 1 ? true : false;
 
+	p.height = 1 + max(left.height, right.height);
+	p.isBalanced = left.isBalanced and right.isBalanced and rootIsBalanced;
+	
 	return p;
-
 }
 
 
@@ -126,7 +129,7 @@ int main() {
 
 	checkHeightBalanced(root) ? cout << "height-balanced!" << endl : cout << "not height-balanced" << endl;
 
-	Pair p = optimisedHeightBalanced(root);
+	Pair p = checkHeightBalancedOptmised(root);
 	p.isBalanced ? cout << "height-balanced!" << endl : cout << "not height-balanced" << endl;
 
 	return 0;
