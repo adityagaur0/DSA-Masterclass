@@ -94,7 +94,19 @@ bool checkHeightBalanced(TreeNode* root){ //time complexity: O(n2)
 }
 // --- optimised approach
 class Pair{
-	
+	 public:
+	 int height;
+	 bool isBalanced;
+}
+
+Pair optimisedHeightBalanced(TreeNode* root){
+	//base case
+
+	//recusive case
+	Pair left=optimisedHeightBalanced(root->left);
+	Pair right=optimisedHeightBalanced(root->right);
+
+	bool is
 }
 
 
