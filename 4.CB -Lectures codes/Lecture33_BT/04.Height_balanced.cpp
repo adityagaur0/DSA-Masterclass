@@ -56,7 +56,7 @@ TreeNode* buildTree() {
 	// 3. ask your friend to construct the rightSubtree from the preOrder traversal of the rightSubtree
 
 	root->right = buildTree();
-
+ 
 }
 
 int computeHeight(TreeNode* root){
