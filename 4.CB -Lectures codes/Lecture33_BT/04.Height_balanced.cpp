@@ -100,13 +100,20 @@ class Pair{
 }
 
 Pair optimisedHeightBalanced(TreeNode* root){
+	Pair p;
 	//base case
 
 	//recusive case
 	Pair left=optimisedHeightBalanced(root->left);
 	Pair right=optimisedHeightBalanced(root->right);
 
-	bool is
+	bool rootIsBalanced=abs(left.height-right.height)<=1?true:false;
+
+	p.height=1+ma
+	p.isBalanced =left.isBalanced and right.isBalanced and rootIsBalanced;
+
+	return p
+
 }
 
 
