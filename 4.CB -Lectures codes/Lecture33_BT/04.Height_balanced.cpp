@@ -57,8 +57,6 @@ TreeNode* buildTree() {
 
 	root->right = buildTree();
 
-	return root;
-
 }
 
 int computeHeight(TreeNode* root){
