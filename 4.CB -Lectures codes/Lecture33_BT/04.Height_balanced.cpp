@@ -92,16 +92,21 @@ bool checkHeightBalanced(TreeNode* root){ //time complexity: O(n2)
     return lstIsBalanced and rstIsBalanced and rootIsBalanced;
 
 }
-// --- optimised approach
+// --- optimised approach O(n)
 class Pair{
 	 public:
 	 int height;
 	 bool isBalanced;
-}
+};
 
 Pair optimisedHeightBalanced(TreeNode* root){
 	Pair p;
 	//base case
+	if(root==NULL){
+		p.height=-1;
+		p.isBalanced=true;
+		return p;
+	}
 
 	//recusive case
 	Pair left=optimisedHeightBalanced(root->left);
@@ -109,10 +114,10 @@ Pair optimisedHeightBalanced(TreeNode* root){
 
 	bool rootIsBalanced=abs(left.height-right.height)<=1?true:false;
 
-	p.height=1+ma
+	p.height=1+max(left.height,right.height);
 	p.isBalanced =left.isBalanced and right.isBalanced and rootIsBalanced;
 
-	return p
+	return p;
 
 }
 
@@ -123,8 +128,8 @@ int main() {
 
 	checkHeightBalanced(root) ? cout << "height-balanced!" << endl : cout << "not height-balanced" << endl;
 
-	// Pair p = checkHeightBalancedOptmised(root);
-	// p.isBalanced ? cout << "height-balanced!" << endl : cout << "not height-balanced" << endl;
+	Pair p = optimisedHeightBalanced(root);
+	p.isBalanced ? cout << "height-balanced!" << endl : cout << "not height-balanced" << endl;
 
 	return 0;
 }
