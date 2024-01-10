@@ -72,6 +72,7 @@ int computeHeight(TreeNode* root){
     int y=computeHeight(root->right);
     return max((1+x), (1+y));
 }
+// ---- approach 1.
 bool checkHeightBalanced(TreeNode* root){ //time complexity: O(n2)
     //base case
     if(root==NULL){
@@ -90,6 +91,10 @@ bool checkHeightBalanced(TreeNode* root){ //time complexity: O(n2)
 
     return lstIsBalanced and rstIsBalanced and rootIsBalanced;
 
+}
+// --- optimised approach
+class Pair{
+	
 }
 
 
