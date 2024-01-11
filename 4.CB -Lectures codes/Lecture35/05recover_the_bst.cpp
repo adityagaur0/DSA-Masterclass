@@ -25,9 +25,9 @@ void printInOrder(TreeNode* root){
     printInOrder(root->right);
 
 } 
-vector<int> inOrder;
 
-void buildInOrder(TreeNode* root){
+
+void buildInOrder(TreeNode* root,vector<int>& inOrder){
     //base case
     if(root==NULL){
         return ;
@@ -40,18 +40,10 @@ void buildInOrder(TreeNode* root){
 
 } 
 
-void recover(vector<int> inOrder){
-    int temp=0;
-
-    for(int i=1;i<InOrder.size();i++){
-        if(inOrder[i]>inOrder[i-1]){
-            ...
-        }
-        else{
-            temp=inOder[i-1];
-        }
-
-    }    
+void recoverTree(TreeNode* root){
+    vector<TreeNode*>inOrder; //cuz yea tree node ka address save kr raha hoga.
+    buildInOrder(root,inOrder);
+    
 
 }
 
@@ -72,14 +64,11 @@ int main() {
 
     printInOrder(root);
     cout<<endl;
-    buildInOrder(root);
-    for(int x:inOrder){
-        cout<< x;
-    }
+
 
     cout << endl;
 
-    // recoverTree(root);
+    recoverTree(root);
 
     printInOrder(root);
 
