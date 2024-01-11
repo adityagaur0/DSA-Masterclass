@@ -39,32 +39,14 @@ void buildInOrder(TreeNode* root){
     buildInOrder(root->right);
 
 } 
-vector<TreeNode*> inOrder;
 
-void buildInOrder(TreeNode* root) {
+// void recover(TreeNode* root){
+//     //base case
 
-    // base case
-
-    if (root == NULL) {
-        return;
-    }
-
-    // recursive case
-
-    buildInOrder(root->left);
-
-    inOrder.push_back(root);
-
-    buildInOrder(root->right);
-
-}
-void recover(TreeNode* root){
-    //base case
-
-    //recusive case
+//     //recusive case
     
 
-}
+// }
 
 
 
@@ -83,7 +65,7 @@ int main() {
 
     printInOrder(root);
     buildInOrder(root);
-    for(x:inOrder){
+    for(TreeNode x:inOrder){
         cout<< x;
     }
 
