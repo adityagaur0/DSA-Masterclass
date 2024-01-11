@@ -44,7 +44,7 @@ void recoverTree(TreeNode* root){
     vector<TreeNode*>inOrder; //cuz yea tree node ka address save kr raha hoga.
     buildInOrder(root,inOrder);
     TreeNode* first =NULL;
-    TreeNode* second =NULL:
+    TreeNode* second =NULL;
     for(int i=1;i<inOrder.size();i++){
         if(inOrder[i]->val < inOrder[i-1]->val){
             //we have found the first voilation in the Bst property at [i-1] index
