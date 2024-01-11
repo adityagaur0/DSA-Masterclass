@@ -43,25 +43,29 @@ void buildInOrder(TreeNode* root,vector<TreeNode*>& inOrder){
 void recoverTree(TreeNode* root){
     vector<TreeNode*>inOrder; //cuz yea tree node ka address save kr raha hoga.
     buildInOrder(root,inOrder);
-    TreeNode* first = NULL;
-    TreeNode* second = NULL;
-    for(int i=1;i<inOrder.size();i++){
-        if(inOrder[i]->val < inOrder[i-1]->val){
-            //we have found the first voilation in the Bst property at [i-1] index
-            
-            if(first==NULL){
-                first=inOrder[i-1];
-            }else{
-            // we have found the second voilation in the BST property at [i] index
-                second=inOrder[i];
-                 break;
-            }
-            
-            
-        }
+    for(int i=0;i<inOrder.size();i++){
+        cout<<inOrder[i]->val;
     }
+    
+    // TreeNode* first = NULL;
+    // TreeNode* second = NULL;
+    // for(int i=1;i<inOrder.size();i++){
+    //     if(inOrder[i]->val < inOrder[i-1]->val){
+    //         //we have found the first voilation in the Bst property at [i-1] index
+            
+    //         if(first==NULL){
+    //             first=inOrder[i-1];
+    //         }else{
+    //         // we have found the second voilation in the BST property at [i] index
+    //             second=inOrder[i];
+    //              break;
+    //         }
+            
+            
+    //     }
+    // }
 
-    swap(first->val,second->val);
+    // swap(first->val,second->val);
     
 
 }
@@ -88,6 +92,7 @@ int main() {
     cout << endl;
 
     recoverTree(root);
+    cout<< endl;
 
     printInOrder(root);
 
