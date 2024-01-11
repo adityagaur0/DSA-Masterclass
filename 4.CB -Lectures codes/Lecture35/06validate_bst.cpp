@@ -12,10 +12,10 @@ public:
 		this->left = this->right = NULL;
 	}
 };
-TreeNode* findMin(TreeNode* root){
+int findMin(TreeNode* root){
     //base case
     if(root==NULL){
-        return NULL;
+        return 0;
     }
     while (root->left != NULL) {
 		root = root->left;
@@ -23,13 +23,13 @@ TreeNode* findMin(TreeNode* root){
 
 
     //recusrsive case
-    return root;
+    return root->val;
 
 }
-TreeNode* findMax(TreeNode* root){
+int findMax(TreeNode* root){
     //base case
     if(root==NULL){
-        return NULL;
+        return 0;
     }
     while (root->right != NULL) {
 		root = root->right;
@@ -37,7 +37,7 @@ TreeNode* findMax(TreeNode* root){
 
 
     //recusrsive case
-    return root;
+    return root->val;
 
 }
 bool isBST(TreeNode* root){
