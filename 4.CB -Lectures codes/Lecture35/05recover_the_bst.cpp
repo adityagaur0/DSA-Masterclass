@@ -24,8 +24,9 @@ void printInOrder(TreeNode* root){
     printInOrder(root->right);
 
 } 
-vector<TreeNode*>
-void printInOrder(TreeNode* root){
+vector<TreeNode*> inOrder;
+
+void buildInOrder(TreeNode* root){
     //base case
     if(root==NULL){
         return ;
@@ -33,7 +34,7 @@ void printInOrder(TreeNode* root){
 
     //recusive case
     printInOrder(root->left);
-    cout<<root->val;
+    inOrder.push_back(root->val);
     printInOrder(root->right);
 
 } 
