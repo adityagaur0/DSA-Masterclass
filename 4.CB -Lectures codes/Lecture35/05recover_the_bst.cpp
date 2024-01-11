@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 class TreeNode{
 public:
@@ -33,9 +34,9 @@ void buildInOrder(TreeNode* root){
     }
 
     //recusive case
-    printInOrder(root->left);
+    buildInOrder(root->left);
     inOrder.push_back(root->val);
-    printInOrder(root->right);
+    buildInOrder(root->right);
 
 } 
 void recover(TreeNode* root){
@@ -62,10 +63,14 @@ int main() {
     root->right->right = new TreeNode(6);
 
     printInOrder(root);
+    buildInOrder(root);
+    for(x:inOrder){
+        cout<< x;
+    }
 
     cout << endl;
 
-    recoverTree(root);
+    // recoverTree(root);
 
     printInOrder(root);
 
