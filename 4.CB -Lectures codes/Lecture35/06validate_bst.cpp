@@ -42,6 +42,9 @@ TreeNode* findMax(TreeNode* root){
 }
 bool isBST(TreeNode* root){
     //base case
+    if(root==NULL){
+        return true;
+    }
 
     //recursive case 
     //1.check if the lst is a bst
