@@ -10,13 +10,32 @@ class TreeNode{
         this->right= NULL;
     }
 }
-int maxLeft(TreeNode* root){
+TreeNode* findMin(TreeNode* root){
     //base case
-    
+    if(root==NULL){
+        return NULL;
+    }
+    if(root->left!=NULL){
+        return root;
+    }
+
 
     //recusrsive case
-    left call;
-    right call;
+    return findMin(root->left);
+
+}
+TreeNode* findMax(TreeNode* root){
+    //base case
+    if(root==NULL){
+        return NULL;
+    }
+    if(root->right!=NULL){
+        return root;
+    }
+
+
+    //recusrsive case
+    return findMin(root->right);
 
 }
 bool isBST(TreeNode* root){
@@ -25,6 +44,7 @@ bool isBST(TreeNode* root){
     //recursive case 
     isBST(root->left);
     isBST(root->right);
+    return ()
 }
 int main() {
 
