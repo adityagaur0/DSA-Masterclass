@@ -23,7 +23,7 @@ TreeNode* findMin(TreeNode* root){
 
 
     //recusrsive case
-    return findMin(root->left);
+    return root;
 
 }
 TreeNode* findMax(TreeNode* root){
@@ -37,7 +37,7 @@ TreeNode* findMax(TreeNode* root){
 
 
     //recusrsive case
-    return findMin(root->right);
+    return root;
 
 }
 bool isBST(TreeNode* root){
