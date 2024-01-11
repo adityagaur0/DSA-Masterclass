@@ -15,7 +15,7 @@ public:
 int findMin(TreeNode* root){
     //base case
     if(root==NULL){
-        return 0;
+        return INT_MAX;
     }
     while (root->left != NULL) {
 		root = root->left;
@@ -29,7 +29,7 @@ int findMin(TreeNode* root){
 int findMax(TreeNode* root){
     //base case
     if(root==NULL){
-        return 0;
+        return INT_MIN;
     }
     while (root->right != NULL) {
 		root = root->right;
@@ -71,7 +71,8 @@ int main() {
 	root->right->right = new TreeNode(17);
 
 	isBST(root) ? cout << "true" << endl : cout << "false" << endl;
-
+    cout<<endl;
+    cout<<isBST(root) ;
 	// isBSTEfficient(root).bst ? cout << "true" << endl : cout << "false" << endl;
 
 	// long long lb = (long long)INT_MIN - 1; // or LLONG_MIN
