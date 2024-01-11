@@ -48,7 +48,7 @@ void recover(vector<int> inOrder){
             ...
         }
         else{
-            temp=
+            temp=inOder[i-1];
         }
 
     }    
