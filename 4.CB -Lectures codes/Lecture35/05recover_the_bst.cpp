@@ -34,26 +34,26 @@ void buildInOrder(TreeNode* root,vector<TreeNode*>& inOrder){
     }
 
     //recusive case
-    buildInOrder(root->left);
+    buildInOrder(root->left,inOrder);
     inOrder.push_back(root);
-    buildInOrder(root->right);
+    buildInOrder(root->right,inOrder);
 
 } 
 
 void recoverTree(TreeNode* root){
     vector<TreeNode*>inOrder; //cuz yea tree node ka address save kr raha hoga.
     buildInOrder(root,inOrder);
-    TreeNode* first =NULL;
-    TreeNode* second =NULL;
+    TreeNode* first = NULL;
+    TreeNode* second = NULL;
     for(int i=1;i<inOrder.size();i++){
         if(inOrder[i]->val < inOrder[i-1]->val){
             //we have found the first voilation in the Bst property at [i-1] index
             
             if(first==NULL){
-                left=inOrder[i-1];
+                first=inOrder[i-1];
             }else{
             // we have found the second voilation in the BST property at [i] index
-                right=inOrder[i];
+                second=inOrder[i];
                  break;
             }
             
@@ -61,7 +61,7 @@ void recoverTree(TreeNode* root){
         }
     }
 
-    swap(fist->val,second->val);
+    swap(first->val,second->val);
     
 
 }
