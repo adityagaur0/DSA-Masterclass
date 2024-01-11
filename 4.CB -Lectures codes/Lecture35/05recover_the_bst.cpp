@@ -23,6 +23,10 @@ void printInOrder(TreeNode* root){
     printInOrder(root->right);
 
 } 
+TreeNode* recover(TreeNode* root){
+                                
+}
+
 
 
 int main() {
@@ -42,7 +46,7 @@ int main() {
 
     cout << endl;
 
-    // recoverTree(root);
+    recoverTree(root);
 
     printInOrder(root);
 
