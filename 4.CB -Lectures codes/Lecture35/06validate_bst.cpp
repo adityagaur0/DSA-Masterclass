@@ -58,6 +58,13 @@ bool isBST(TreeNode* root){
 
     
 }
+Pair {
+public:
+    int maxval;
+    int minVal;
+    bool isBst;
+
+};
 int main() {
 
 	TreeNode* root = new TreeNode(10);
@@ -73,6 +80,7 @@ int main() {
 	isBST(root) ? cout << "true" << endl : cout << "false" << endl;
     cout<<endl;
     cout<<isBST(root) ;
+
 	// isBSTEfficient(root).bst ? cout << "true" << endl : cout << "false" << endl;
 
 	// long long lb = (long long)INT_MIN - 1; // or LLONG_MIN
