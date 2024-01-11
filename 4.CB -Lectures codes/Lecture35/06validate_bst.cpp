@@ -10,10 +10,21 @@ class TreeNode{
         this->right= NULL;
     }
 }
+int maxLeft(TreeNode* root){
+    //base case
+    
+
+    //recusrsive case
+    left call;
+    right call;
+
+}
 bool isBST(TreeNode* root){
     //base case
 
-    //recursive case
+    //recursive case 
+    isBST(root->left);
+    isBST(root->right);
 }
 int main() {
 
