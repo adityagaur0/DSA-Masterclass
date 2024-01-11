@@ -17,9 +17,9 @@ TreeNode* findMin(TreeNode* root){
     if(root==NULL){
         return NULL;
     }
-    if(root->left!=NULL){
-        return root;
-    }
+    while (root->left != NULL) {
+		root = root->left;
+	}
 
 
     //recusrsive case
@@ -31,9 +31,9 @@ TreeNode* findMax(TreeNode* root){
     if(root==NULL){
         return NULL;
     }
-    if(root->right!=NULL){
-        return root;
-    }
+    while (root->right != NULL) {
+		root = root->right;
+	}
 
 
     //recusrsive case
