@@ -52,11 +52,11 @@ void recoverTree(TreeNode* root){
             
             if(first==NULL){
                 first=inOrder[i-1];
-            }else{
+            }
             // we have found the second voilation in the BST property at [i] index
                 second=inOrder[i];
-                 break;
-            }
+                
+            
             
             
         }
