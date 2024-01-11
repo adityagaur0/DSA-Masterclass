@@ -65,6 +65,17 @@ public:
     bool isBst;
 
 };
+bool isBSTEfficient(TreeNode* root){
+    Pair p;
+    //base case
+
+    //recusive case
+    
+
+    
+}
+
+
 int main() {
 
 	TreeNode* root = new TreeNode(10);
