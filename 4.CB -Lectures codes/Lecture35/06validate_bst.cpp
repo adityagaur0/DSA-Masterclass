@@ -5,7 +5,7 @@ class TreeNode {
 public:
 	int val;
 	TreeNode* left;
-	TreeNode* right;
+	TreeNode* right; 
 
 	TreeNode(int val) {
 		this->val = val;
