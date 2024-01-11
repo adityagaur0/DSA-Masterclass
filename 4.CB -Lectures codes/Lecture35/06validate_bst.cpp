@@ -1,15 +1,17 @@
 #include <iostream>
+using namespace std;
 
-class TreeNode{
-    int val;
-    TreeNode* left;
-    TreeNode* right;
-    TreeNode(int val){
-        this->val=val;
-        this->left=NULL;
-        this->right= NULL;
-    }
-}
+class TreeNode {
+public:
+	int val;
+	TreeNode* left;
+	TreeNode* right;
+
+	TreeNode(int val) {
+		this->val = val;
+		this->left = this->right = NULL;
+	}
+};
 TreeNode* findMin(TreeNode* root){
     //base case
     if(root==NULL){
