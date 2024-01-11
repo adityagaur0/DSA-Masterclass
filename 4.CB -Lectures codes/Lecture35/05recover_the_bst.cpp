@@ -11,6 +11,7 @@ public:
         this->right=NULL;
     }
 };
+
 void printInOrder(TreeNode* root){
     //base case
     if(root==NULL){
@@ -23,8 +24,25 @@ void printInOrder(TreeNode* root){
     printInOrder(root->right);
 
 } 
-TreeNode* recover(TreeNode* root){
-                                
+vector<TreeNode*>
+void printInOrder(TreeNode* root){
+    //base case
+    if(root==NULL){
+        return ;
+    }
+
+    //recusive case
+    printInOrder(root->left);
+    cout<<root->val;
+    printInOrder(root->right);
+
+} 
+void recover(TreeNode* root){
+    //base case
+
+    //recusive case
+    
+
 }
 
 
