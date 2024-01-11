@@ -49,7 +49,7 @@ bool isBST(TreeNode* root){
     //2.check if the rst is a bst
     bool rightisBst=isBST(root->right);
     //3. check if the root node satsify the property of the bst
-    bool rootisBst= (root->val>findMax(root->left)) and (root->val<findMin(root->right));
+    bool rootisBst= (root->val> findMax(root->left)) and (root->val< findMin(root->right));
 
     return leftisBst and rightisBst and rootisBst;
 
