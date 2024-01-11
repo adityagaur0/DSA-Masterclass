@@ -42,9 +42,14 @@ bool isBST(TreeNode* root){
     //base case
 
     //recursive case 
-    isBST(root->left);
-    isBST(root->right);
-    return ()
+    //1.check if the lst is a bst
+    bool leftisBst=isBst(root->left);
+    //2.check if the rst is a bst
+    bool rightisBst=isBst(root->right);
+    //3. check if the root node satsify the property of the bst
+    bool rootisBst=
+
+    
 }
 int main() {
 
