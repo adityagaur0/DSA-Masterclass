@@ -2,22 +2,28 @@
 using namespace std;
 class TreeNode{
 public:
-    int root;
+    int val;
     TreeNode* left;
     TreeNode* right;
     TreeNode(int val){
-        this->root=val;
+        this->val=val;
         this->left=NULL;
         this->right=NULL;
     }
-}
+};
 void printInOrder(TreeNode* root){
     //base case
+    if(root==NULL){
+        return ;
+    }
 
     //recusive case
-    
+    printInOrder(root->left);
+    cout<<root->val;
+    printInOrder(root->right);
 
 }
+
 
 int main() {
 
@@ -36,7 +42,7 @@ int main() {
 
     cout << endl;
 
-    recoverTree(root);
+    // recoverTree(root);
 
     printInOrder(root);
 
