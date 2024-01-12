@@ -72,6 +72,7 @@ Triple isBSTEfficient(TreeNode* root){
         p.isBst = true;
         p.minVal = INT_MAX;
         p.maxval = INT_MIN;
+        return p;
     }
 
     //recursive case
@@ -80,9 +81,13 @@ Triple isBSTEfficient(TreeNode* root){
 
     bool rootisBst = (root->val > leftisBst.maxval and root->val < rightisBst.minVal);
 
-    p.maxval = max({leftisBst.maxval, rightisBst.maxval, root->val});
+
+    p.isBst = leftisBst.isBst and rightisBst.isBst and rootisBst;
+
     p.minVal = min({leftisBst.minVal, rightisBst.minVal, root->val});
-    p.isBST = leftisBst.isBst and rightisBst.isBst and rootisBst;
+    p.maxval = max({leftisBst.maxval, rightisBst.maxval, root->val});
+    
+    
 
     return p;
 }
