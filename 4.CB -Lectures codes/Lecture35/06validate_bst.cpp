@@ -58,7 +58,7 @@ bool isBST(TreeNode* root){
 
     
 }
-Pair {
+Triple {
 public:
     int maxval;
     int minVal;
@@ -66,12 +66,12 @@ public:
 
 };
 bool isBSTEfficient(TreeNode* root){
-    Pair p;
+    Triple p;
     //base case
 
     //recusive case
-    Pair leftisBst = isBSTEfficient(root->left);
-    Pair rightisBst =isBSTEfficient(root->right);
+    Triple leftisBst = isBSTEfficient(root->left);
+    Triple rightisBst =isBSTEfficient(root->right);
 
     bool rootisBst = (root->val > leftisBst.maxval and root->val <rightisBst.minVal);
 
