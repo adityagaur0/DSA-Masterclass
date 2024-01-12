@@ -70,7 +70,10 @@ bool isBSTEfficient(TreeNode* root){
     //base case
 
     //recusive case
-    
+    Pair leftisBst = isBSTEfficient(root->left);
+    Pair rightisBst =isBSTEfficient(root->right);
+
+    Pair rootisBst = 
     
 
     
