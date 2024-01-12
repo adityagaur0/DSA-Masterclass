@@ -73,8 +73,14 @@ bool isBSTEfficient(TreeNode* root){
     Pair leftisBst = isBSTEfficient(root->left);
     Pair rightisBst =isBSTEfficient(root->right);
 
-    Pair rootisBst =     
+    bool rootisBst = (root->val > leftisBst.maxval and root->val <rightisBst.minVal);
 
+    p.maxval =
+    p.minVal =
+
+    p.isBST = leftisBst and rightisBst and rootisBst;
+
+    return isBst;
     
 }
 
