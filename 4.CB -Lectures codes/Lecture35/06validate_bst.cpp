@@ -83,7 +83,7 @@ Triple isBSTEfficient(TreeNode* root){
 
     p.maxval = max({leftisBst.maxval,rightisBst.maxval,rootisBst.maxval});
     p.minVal =min({rightisBst.minVal,rightisBst.minVal,rootisBst.minVal});
-    p.isBST = leftisBst and rightisBst and rootisBst;
+    p.isBST = leftisBst.isBst and rightisBst.isBst and rootisBst.isBst;
 
     return p;
     
