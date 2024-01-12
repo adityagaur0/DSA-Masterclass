@@ -13,7 +13,16 @@ public:
 	}
 };
 bool checkBSTRange(TreeNode* root,int lo,int hi){
-    
+    //base case
+    if(root ==NULL){
+        return true;
+    }
+
+    //recusive case
+    return root->val>lo and root->val <hi and 
+    checkBSTRange(root->left, lo,root->val) and
+    checkBSTRange(root->right,root->val, hi);
+     
 
 }
 // int findMin(TreeNode* root){
@@ -110,8 +119,8 @@ int main() {
 	root->right->left  = new TreeNode(13);
 	root->right->right = new TreeNode(17);
 
-	isBST(root) ? cout << "true" << endl : cout << "false" << endl;
-    cout<<endl;
+	// isBST(root) ? cout << "true" << endl : cout << "false" << endl;
+    // cout<<endl;
     // cout<<isBST(root) ;
     // Triple t = isBSTEfficient(root);
     // cout<<t.isBst;
@@ -124,6 +133,6 @@ int main() {
 	// isBSTRange(root, lb, ub) ? cout << "true" << endl : cout << "false" << endl;
     int lo =INT_MIN;
     int hi= INT_MAX;
-    checkBSTRange(root,lo,hi);
+    cout<<checkBSTRange(root,lo,hi);
 	return 0;
 }
