@@ -108,9 +108,9 @@ int main() {
 
 	isBST(root) ? cout << "true" << endl : cout << "false" << endl;
     cout<<endl;
-    cout<<isBST(root) ;
-    Triple t = isBSTEfficient(root);
-    cout<<t.isBst;
+    // cout<<isBST(root) ;
+    // Triple t = isBSTEfficient(root);
+    // cout<<t.isBst;
 
 	// isBSTEfficient(root).bst ? cout << "true" << endl : cout << "false" << endl;
 
