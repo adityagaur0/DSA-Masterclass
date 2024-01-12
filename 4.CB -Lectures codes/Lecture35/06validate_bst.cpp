@@ -68,6 +68,12 @@ public:
 bool isBSTEfficient(TreeNode* root){
     Triple p;
     //base case
+    if(root==NULL){
+        isBst =true;
+        minVal =INT_MAX;
+        maxval=INT_MIN;
+        
+    }
 
     //recusive case
     Triple leftisBst = isBSTEfficient(root->left);
@@ -75,12 +81,11 @@ bool isBSTEfficient(TreeNode* root){
 
     bool rootisBst = (root->val > leftisBst.maxval and root->val <rightisBst.minVal);
 
-    p.maxval =
-    p.minVal =
-
+    p.maxval = max({leftisBst.maxval,rightisBst.maxval,rootisBst.maxval});
+    p.minVal =min({rightisBst.minVal,rightisBst.minVal,rootisBst.minVal});
     p.isBST = leftisBst and rightisBst and rootisBst;
 
-    return isBst;
+    return t;
     
 }
 
@@ -100,6 +105,8 @@ int main() {
 	isBST(root) ? cout << "true" << endl : cout << "false" << endl;
     cout<<endl;
     cout<<isBST(root) ;
+    Triple t = isBSTEfficient(root);
+    cout<<t.isBst;
 
 	// isBSTEfficient(root).bst ? cout << "true" << endl : cout << "false" << endl;
 
