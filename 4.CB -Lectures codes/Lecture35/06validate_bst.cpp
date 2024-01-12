@@ -73,8 +73,7 @@ bool isBSTEfficient(TreeNode* root){
     Pair leftisBst = isBSTEfficient(root->left);
     Pair rightisBst =isBSTEfficient(root->right);
 
-    Pair rootisBst = 
-    
+    Pair rootisBst =     
 
     
 }
