@@ -58,14 +58,14 @@ bool isBST(TreeNode* root){
 
     
 }
-Triple {
+class Triple {
 public:
     int maxval;
     int minVal;
     bool isBst;
 
 };
-bool isBSTEfficient(TreeNode* root){
+Triple isBSTEfficient(TreeNode* root){
     Triple p;
     //base case
     if(root==NULL){
