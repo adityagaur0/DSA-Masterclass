@@ -63,31 +63,30 @@ public:
     int maxval;
     int minVal;
     bool isBst;
-
 };
+
 Triple isBSTEfficient(TreeNode* root){
     Triple p;
     //base case
     if(root==NULL){
-        p.isBst =true;
-        p.minVal =INT_MAX;
-        p.maxval=INT_MIN;
-        
+        p.isBst = true;
+        p.minVal = INT_MAX;
+        p.maxval = INT_MIN;
     }
 
-    //recusive case
+    //recursive case
     Triple leftisBst = isBSTEfficient(root->left);
-    Triple rightisBst =isBSTEfficient(root->right);
+    Triple rightisBst = isBSTEfficient(root->right);
 
-    bool rootisBst = (root->val > leftisBst.maxval and root->val <rightisBst.minVal);
+    bool rootisBst = (root->val > leftisBst.maxval and root->val < rightisBst.minVal);
 
-    p.maxval = min({leftisBst.maxval,rightisBst.maxval,root->val});
-    p.minVal =min({leftisBst.minVal,rightisBst.minVal,root->val});
+    p.maxval = max({leftisBst.maxval, rightisBst.maxval, root->val});
+    p.minVal = min({leftisBst.minVal, rightisBst.minVal, root->val});
     p.isBST = leftisBst.isBst and rightisBst.isBst and rootisBst;
 
     return p;
-    
 }
+
 
 
 int main() {
