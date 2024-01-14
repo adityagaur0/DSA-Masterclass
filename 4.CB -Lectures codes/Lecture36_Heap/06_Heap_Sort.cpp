@@ -28,9 +28,10 @@ int main(){
     for(int i=n-1;i>=0;i--){
         heapify(v,n,i);
     }
-    for(int i: v){
-        cout<< v[i];
-    }
+	for (int i = 0; i < v.size(); i++) {
+		cout << v[i] << " ";
+	}
+	cout<<endl;
     
 
 }
