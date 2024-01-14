@@ -1,4 +1,4 @@
-// d01permutationsSum.cpp  
+// g++ -std=c++11 01permutationsSum.cpp  
 //./a.out
 #include <iostream>
 #include <vector>
