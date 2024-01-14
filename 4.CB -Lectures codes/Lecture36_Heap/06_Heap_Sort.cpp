@@ -25,7 +25,7 @@ int main(){
     int n=v.size();
 
     //convert the vector into max heap(bottom uo fashion)
-    for(int i=n-1;i>=0;i++){
+    for(int i=n-1;i>=0;i--){
         heapify(v,n,i);
     }
     for(int i: v){
