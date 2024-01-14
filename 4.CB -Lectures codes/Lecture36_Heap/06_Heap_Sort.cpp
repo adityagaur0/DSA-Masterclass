@@ -32,6 +32,16 @@ int main(){
 		cout << v[i] << " ";
 	}
 	cout<<endl;
-    
+
+    int heapsize=n;
+    while(heapsize>1){
+        swap(v[0],v[heapsize-1]);
+        heapsize--;
+        heapify(v,heapsize,0);
+    }
+	for (int i = 0; i < v.size(); i++) {
+		cout << v[i] << " ";
+	}
+	cout<<endl;
 
 }
