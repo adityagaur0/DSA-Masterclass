@@ -1,8 +1,9 @@
 #include <iostream>
+#include <vector>
 #include <queue>
 using namespace std;
 int main(){
-    priority_queue<int,vector<int>,greater<int>> m;
+    priority_queue<int,vector<int>, greater<int> > m;
     m.push(9);
 	m.push(7);
 	m.push(8);
