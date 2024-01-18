@@ -13,17 +13,41 @@ Example : Input = 4, 1, 2, -1, 3, -1 7 0 1 2 -1 8 -1 . . . ; K = 3
 */
 #include <iostream>
 using namespace std;
-#define pq prioeity_queue<int, vector<int>,greater<int>> // max heap
-int main(){
-    int k=3
-    pq minHeap;
+#define pq prioeity_queue<int, vector<int>, greater<int>> // max heap
+
+void printHeap(pq minHeap)
+{
+    while (!minHeap.empty())
+    {
+        cout << minHeap.top() << " ";
+        minHeap.pop();
+    }
+    cout << endl;
+}
+int main()
+{
+    int k = 3 pq minHeap;
     int data;
     // asume first k elements of the stream do not contain -1
-    for (int i = 0; i < k; i++) {
+    for (int i = 0; i < k; i++)
+    {
         cin >> data;
         minHeap.push(data);
     }
-
-    
-
+    while (true)
+    {
+        cin >> data;
+        if (data == -1)
+        {
+            printHeap(minHeap);
+        }
+        else
+        {
+            if (minHeap.top() < data)
+            {
+                minHeap.pop();
+                minHeap.push(data);
+            }
+        }
+    }
 }
